@@ -1,26 +1,194 @@
-export default function FinancialAdvice() {
+import { motion } from "framer-motion";
+
+export default function FinancialAdvisor() {
   return (
-    <div className="p-10 bg-gray-50 min-h-screen">
-      <h1 className="text-4xl font-bold text-blue-700 mb-6">Financial Advisors 🧑‍💼</h1>
+    <div className="bg-white space-y-20 md:space-y-12">
+      
+      {/* ---------------- HERO SECTION ---------------- */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center py-10"
+      >
+        <h1 className="text-4xl font-extrabold text-center mb-4 text-blue-900">
+          Financial Advisor Services
+        </h1>
+        <p className="text-gray-600 mt-1 text-lg max-w-2xl mx-auto">
+          Personalized wealth planning, investment guidance, and financial strategies for a secure future.
+        </p>
+      </motion.div>
 
-      <p className="text-lg text-gray-700 max-w-2xl mb-10">
-        Get expert guidance from certified financial advisors to plan wealth,
-        investments, retirement and tax optimization.
-      </p>
+      {/* ---------------- CONTENT WITH IMAGE ---------------- */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 1 }}
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 px-6 md:px-12  items-center"
+      >
 
-      <div className="bg-white shadow p-8 rounded-xl mb-10">
-        <ul className="space-y-4 text-lg text-gray-700">
-          <li>✔ Investment & Wealth Planning</li>
-          <li>✔ Retirement Strategy</li>
-          <li>✔ Savings Optimization</li>
-          <li>✔ Income & Tax Planning</li>
-          <li>✔ Portfolio Management</li>
-        </ul>
-      </div>
+        {/* --- IMAGE LEFT --- */}
+        <motion.div
+          initial={{ x: -40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
+        >
+          <img
+            src="assets/services/financialadvisor.jpg"
+            alt="Financial Advisor Service"
+            className="rounded-2xl shadow-xl w-[100%] md:w-[95%] h-[300px] md:h-[350px] object-cover hover:scale-[1.03] transition-all duration-300"
+          />
+        </motion.div>
 
-      <button className="bg-blue-700 text-white px-8 py-3 rounded-lg">
-        Book Appointment
-      </button>
+        {/* --- TEXT CONTENT RIGHT --- */}
+        <motion.div
+          initial={{ x: 40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-gray-700 leading-relaxed"
+        >
+          <h3 className="text-[22px] font-semibold text-[#0E2A73] mb-4">
+            Secure Your Financial Future with Expert Guidance
+          </h3>
+
+          <p className="mb-6 text-[17px] text-gray-600">
+            Whether you're planning retirement, managing investments, or building long-term wealth — 
+            our financial advisory service helps you make smart, informed, and confident financial decisions.
+          </p>
+
+          <ul className="space-y-4">
+            {[
+              "Personalized wealth and investment planning",
+              "Tax-saving strategies and portfolio management",
+              "Expert retirement and insurance planning support",
+              "Risk assessment, budgeting, and financial analysis",
+              "Step-by-step guidance with complete transparency"
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="text-blue-600 text-xl leading-none">✔️</span>
+                <span className="text-gray-700 font-medium text-[15px]">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+
+      </motion.div>
+
+
+      {/* ---------------- FEATURE CARDS ---------------- */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 1 }}
+        className="max-w-7xl mx-auto px-6 py-12"
+      >
+        <h2 className="text-4xl font-extrabold text-center text-[#0E2A73] mb-5">
+          Why Choose Our Advisory Services?
+        </h2>
+        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-lg">
+          Experience expert financial guidance customized to your goals, lifestyle, and long-term security.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {[
+            { icon: "📊", title: "Personalized Strategies", text: "Get tailored financial guidance that matches your income, goals, and risk profile." },
+            { icon: "💼", title: "Investment Expertise", text: "Our advisors evaluate the best investment plans, SIPs, & market returns for you." },
+            { icon: "🛡️", title: "Risk Management", text: "We help balance growth and safety through wise allocation and professional planning." },
+            { icon: "🤝", title: "Trusted Partnership", text: "We guide you with trust, transparency, and ongoing support for long-term success." }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.07 }}
+              transition={{ type: "spring", stiffness: 150 }}
+              className="bg-white/50 backdrop-blur-xl border border-gray-200 shadow-lg 
+              p-8 rounded-2xl hover:shadow-2xl hover:bg-white transition-all duration-300"
+            >
+              <div className="text-center">
+                <span className="text-6xl mb-4 block">{item.icon}</span>
+              </div>
+
+              <h3 className="text-xl font-bold text-[#0E2A73] mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-gray-700 text-sm leading-relaxed">
+                {item.text}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* ---------------- FORM SECTION ---------------- */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="relative bg-gradient-to-r from-[#0E2A73] to-[#153A8F] py-10 overflow-hidden"
+      >
+        
+        {/* Background Shapes */}
+        <div className=" absolute -left-10 top-8 w-40 h-40 bg-blue-400 opacity-20 blur-2xl rounded-full"></div>
+        <div className="absolute right-6 bottom-6 w-48 h-48 opacity-20 blur-2xl rounded-full"></div>
+
+        <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+          {/* Form */}
+          <form
+            className="bg-white/20 backdrop-blur-xl border border-white/30 shadow-xl p-5 rounded-xl space-y-3 max-w-sm w-full"
+          >
+            <input type="text" placeholder="Full Name *" className="w-full p-2 border border-white/40 rounded bg-white/10 text-white placeholder-gray-300 focus:outline-none" />
+            <input type="number" placeholder="Phone Number *" className="w-full p-2 border border-white/40 rounded bg-white/10 text-white placeholder-gray-300 focus:outline-none" />
+            <input type="email" placeholder="Email Address" className="w-full p-2 border border-white/40 rounded bg-white/10 text-white placeholder-gray-300 focus:outline-none" />
+
+            <select className="w-full p-2 border border-white/40 rounded bg-white/10 text-white focus:outline-none">
+              <option className="text-black">Select Consultation Type *</option>
+              <option className="text-black">Investment Planning</option>
+              <option className="text-black">Retirement Planning</option>
+              <option className="text-black">Tax Saving Strategy</option>
+              <option className="text-black">Insurance Advisory</option>
+            </select>
+
+            <textarea
+              placeholder="Tell us about your financial goals (Optional)"
+              className="w-full p-2 border border-white/40 rounded bg-white/10 text-white placeholder-gray-300 h-16 focus:outline-none"
+            ></textarea>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold py-2 rounded-lg transition text-sm shadow-lg"
+            >
+              Request Consultation
+            </motion.button>
+          </form>
+
+          {/* Text Side */}
+          <div className="text-left">
+            <h2 className="text-white text-4xl font-extrabold mb-4 flex items-center gap-2">
+              Start Your Financial Journey 💡
+            </h2>
+
+            <p className="text-gray-200 text-lg mb-4">
+              Share a few details — a certified financial advisor will contact you shortly.
+            </p>
+
+            <p className="text-gray-300 text-base leading-relaxed mb-6">
+              Take the first step toward a secure, strong, and confident financial future with expert guidance.
+            </p>
+
+            <div className="bg-white/10 backdrop-blur-md p-3 rounded-lg w-fit flex items-center gap-3 mb-4">
+              <span className="text-yellow-400 text-xl">⭐</span>
+              <p className="text-gray-200 text-sm">
+                Trusted by <strong className="text-white">15,000+ families & investors</strong>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </motion.div>
+
     </div>
   );
 }
