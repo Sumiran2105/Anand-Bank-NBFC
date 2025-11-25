@@ -74,7 +74,7 @@ export default function Services() {
               key={index}
               to={service.path}
               className="
-                bg-white p-10 rounded-3xl border border-blue-100 shadow-md
+                bg-white p-10 rounded-3xl border  border-blue-100 shadow-md
                 hover:shadow-2xl hover:scale-[1.04]
                 transition-all duration-300 cursor-pointer text-center
                 hover:border-blue-300 hover:bg-blue-50
@@ -82,9 +82,10 @@ export default function Services() {
               "
             >
               {/* Icon */}
-              <div className="mb-6 transition-transform duration-300 group-hover:scale-110">
-                {service.icon}
-              </div>
+             <div className="mb-6 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+  {service.icon}
+</div>
+
 
               {/* Title */}
               <h3 className="text-2xl font-bold text-blue-900 group-hover:text-blue-700 transition">
