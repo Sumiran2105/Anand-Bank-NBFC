@@ -53,9 +53,31 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           
           {/* LOGO */}
-          <Link to="/" className="flex items-center gap-3">
-            <img src="/assets/Anandhlogo.png" alt="Logo" className="w-12" />
-            <h1 className="text-xl font-bold text-blue-700">Anand Bank NBFC</h1>
+          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+              <img
+                src="assets/founder.jpg"
+                alt="Founder"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="flex flex-col items-start">
+              <div className="flex items-center space-x-2">
+                <img
+                  src="assets/Anandhlogo.png"
+                  alt="Anand Logo"
+                  className="w-8 h-10 md:w-10 md:h-12 object-contain"
+                />
+                <div className="flex flex-col items-start">
+                  <h1 className="text-lg md:text-xl font-bold text-blue-800">
+                    <span className="text-orange-500">ANAND </span>BANK NBFC
+                  </h1>
+                  <p className="text-xs text-gray-600 italic mt-1">
+                    "Dharmo Rakshati Rakshitah"
+                  </p>
+                </div>
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -134,7 +134,7 @@ export default function Commitment() {
 <div className="relative flex items-center justify-center w-full h-full">
 
   {/* Background fade so image melts into the section */}
-  <div className="absolute inset-0 bg-gradient-to-l from-blue-50 via-transparent to-transparent pointer-events-none" />
+  <div className="bg-white w-full h-full absolute top-0 left-0" />
 
   <img
     src="/assets/commitment-2.png"
