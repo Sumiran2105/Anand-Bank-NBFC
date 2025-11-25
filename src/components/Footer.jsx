@@ -78,8 +78,8 @@ const Footer = () => {
             {/* Company Info */}
             <div>
               <div className="flex items-start space-x-3 mb-4">
-                <div className="w-16 h-16 rounded-full border-2 border-orange-200 overflow-hidden">
-                  <img src="assets/Anandhlogo.png" className="w-full h-full object-cover object-top" />
+                <div className="w-16 h-16 rounded-full border-2  border-orange-200 overflow-hidden">
+                  <img src="assets/Anandhlogo.png" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold">
@@ -90,7 +90,7 @@ const Footer = () => {
               </div>
 
               <p className="text-gray-300 text-sm mb-2">
-                Transforming raw land into premium plotted communities with trust and transparency.
+                Transforming financial goals into secure, dependable banking solutions with trust and transparency.
               </p>
 
               <div className="flex space-x-3 mt-4">
@@ -134,7 +134,7 @@ const Footer = () => {
               </p>
 
               <p className="text-gray-300 text-sm mt-2">📞 +91 1800 123 4857</p>
-              <p className="text-gray-300 text-sm">📧 info@anandrealty.com</p>
+              <p className="text-gray-300 text-sm">📧 info@anandbank.com</p>
             </div>
           </div>
 
