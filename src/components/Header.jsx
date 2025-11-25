@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useMultiFormModal } from "../context/ModalContext";
-import RealEstateForm from "../pages/Landinformation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const { openModal } = useMultiFormModal();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
@@ -15,19 +12,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ⭐ Updated nav items here
   const navItems = [
     { path: "/", label: "Home" },
+    { path: "/services", label: "Services" },
     { path: "/about", label: "About" },
-    { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
   ];
 
   const isActiveLink = (path) => location.pathname === path;
-
-  const handleLandInfoClick = () => {
-    openModal(<RealEstateForm />);
-    setIsMenuOpen(false);
-  };
 
   return (
     <header
@@ -38,11 +31,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         {/* Row */}
         <div className="flex justify-between items-center py-3 md:py-4">
-          {/* Logo - Improved Mobile Alignment */}
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
             <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
               <img
-                src="./images/image.png"
+                src="assets/founder.jpg"
                 alt="Founder"
                 className="w-full h-full object-cover object-top"
               />
@@ -51,7 +44,7 @@ const Header = () => {
             <div className="flex flex-col items-start">
               <div className="flex items-center space-x-2">
                 <img
-                  src="./images/Anandhlogo.png"
+                  src="assets/Anandhlogo.png"
                   alt="Anand Logo"
                   className="w-8 h-10 md:w-10 md:h-12 object-contain"
                 />
@@ -67,7 +60,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Increased Size */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-3">
             {navItems.map((item) => (
               <Link
@@ -82,18 +75,9 @@ const Header = () => {
                 {item.label}
               </Link>
             ))}
-
-            {/* Land Information Button - Increased Size */}
-            <button
-              onClick={handleLandInfoClick}
-              className="px-6 py-3 rounded-lg text-base font-semibold bg-gradient-to-r from-green-600 to-green-700 text-white hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-2"
-            >
-              <span className="text-lg">📄</span>
-              <span>Land Information Form</span>
-            </button>
           </nav>
 
-          {/* Mobile menu button - Improved Size */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 md:p-3 text-blue-800 hover:bg-blue-50 rounded-lg transition-all duration-200"
@@ -130,7 +114,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu - Improved Alignment */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 pb-4">
             <nav className="space-y-2 pt-3">
@@ -148,15 +132,6 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-
-              {/* Mobile Land Info Button */}
-              <button
-                onClick={handleLandInfoClick}
-                className="w-full text-left px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white text-base font-semibold rounded-lg mt-2 hover:from-green-700 hover:to-green-800 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span className="text-lg">📄</span>
-                <span>Land Information Form</span>
-              </button>
             </nav>
           </div>
         )}
