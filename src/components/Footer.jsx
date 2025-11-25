@@ -79,11 +79,11 @@ const Footer = () => {
             <div>
               <div className="flex items-start space-x-3 mb-4">
                 <div className="w-16 h-16 rounded-full border-2 border-orange-200 overflow-hidden">
-                  <img src="/images/image.png" className="w-full h-full object-cover object-top" />
+                  <img src="assets/Anandhlogo.png" className="w-full h-full object-cover object-top" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold">
-                    <span className="text-orange-400">ANAND</span> <span>REALTYY</span>
+                    <span className="text-orange-400">ANAND</span> <span>BANK</span>
                   </h2>
                   <p className="text-orange-200 italic text-sm">"Dharmo Rakshati Rakshitah"</p>
                 </div>
