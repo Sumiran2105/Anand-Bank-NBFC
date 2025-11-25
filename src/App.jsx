@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 // Layout
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -21,6 +23,8 @@ import FinancialAdvice from "./components/Services/FinancialAdvice.jsx";
 export default function App() {
   return (
     <Router>
+
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-[#f1f2f6]">
 
         <Header />
