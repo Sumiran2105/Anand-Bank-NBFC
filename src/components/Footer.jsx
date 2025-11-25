@@ -71,7 +71,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-b from-gray-900 to-[#081526] text-white">
+      <footer className="bg-gradient-to-b from-blue-900 to-[#081526] text-white">
         <div className="container mx-auto px-6">
           <div className="py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             
@@ -140,10 +140,10 @@ const Footer = () => {
 
           {/* Bottom */}
           <div className="border-t border-white/10 py-4 flex flex-col md:flex-row justify-between text-sm text-gray-400">
-            <p>© {currentYear} Anand Realtyy. All rights reserved.</p>
+            <p>© {currentYear} Anand Bank. All rights reserved.</p>
 
             <div className="flex gap-4 mt-2 md:mt-0">
-              {["Privacy", "Terms", "Disclaimer", "RERA"].map((item) => (
+              {["Privacy", "Terms", "Disclaimer"].map((item) => (
                 <button
                   key={item}
                   onClick={() => setActiveModal(item)}

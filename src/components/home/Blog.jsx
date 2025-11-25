@@ -46,7 +46,7 @@ help you build a sustainable, long-term savings plan.
   };
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-18 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

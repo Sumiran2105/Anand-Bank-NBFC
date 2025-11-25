@@ -27,7 +27,7 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-18 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}

@@ -147,7 +147,7 @@ export default function AboutBank() {
       {/* ============================
             WHY CHOOSE ANAND BANK
       ============================== */}
-      <section className="py-20 px-6">
+      <section className="py-19 px-6">
 
         <h2 className="text-3xl md:text-4xl font-extrabold text-center text-blue-900">
           Why Choose Anand Bank NBFC?
@@ -215,7 +215,7 @@ export default function AboutBank() {
       {/* ============================
                OUR MISSION
       ============================== */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
+      <section className="max-w-6xl mx-auto px-5 py-24">
 
         <h2 className="text-3xl md:text-4xl font-extrabold text-center text-blue-900">
           Our Mission

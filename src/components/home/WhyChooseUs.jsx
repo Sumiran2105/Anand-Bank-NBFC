@@ -39,7 +39,7 @@ const features = [
 // Updated styles for luxury UI and hover
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-indigo-50 to-white">
+    <section className="py-18 px-6 bg-gradient-to-br from-indigo-50 to-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-extrabold text-center text-indigo-900 mb-12 drop-shadow">
           Why Choose Anand Bank NBFC?
