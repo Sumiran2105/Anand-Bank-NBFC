@@ -79,8 +79,8 @@ const Header = () => {
   to="/"
   className="flex items-center space-x-2 md:space-x-3 group overflow-hidden whitespace-nowrap"
 >
-  {/* Founder Image - Smaller on mobile */}
-  <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm flex-shrink-0">
+  {/* Founder Image - Slightly Bigger */}
+  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm flex-shrink-0">
     <img
       src="/assets/founder.jpg"
       alt="Founder"
@@ -93,20 +93,21 @@ const Header = () => {
     <img
       src="assets/Anandhlogo.png"
       alt="Anand Logo"
-      className="w-6 h-8 md:w-10 md:h-12 object-contain flex-shrink-0"
+      className="w-7 h-9 md:w-10 md:h-12 object-contain flex-shrink-0"
     />
 
     <div className="flex flex-col items-start leading-tight overflow-hidden">
-      <h1 className="text-sm md:text-xl font-bold text-blue-800 truncate">
+      <h1 className="text-base md:text-xl font-bold text-blue-800 truncate">
         <span className="text-orange-500">ANAND </span>
         BANK NBFC
       </h1>
-      <p className="text-[10px] md:text-xs text-gray-600 italic truncate">
+      <p className="text-[11px] md:text-xs text-gray-600 italic truncate">
         "Dharmo Rakshati Rakshitah"
       </p>
     </div>
   </div>
 </Link>
+
 
 
           {/* DESKTOP NAV */}
@@ -180,7 +181,7 @@ const Header = () => {
           {/* MOBILE HAMBURGER */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-blue-700 text-4xl p-2"
+            className="lg:hidden text-blue-700 text-3xl"
           >
             ☰
           </button>
