@@ -31,7 +31,6 @@ const Header = () => {
       ],
     },
 
-    // Services is now a normal link
     { path: "/services", label: "Services" },
     { path: "/contact", label: "Contact" },
   ];
@@ -40,14 +39,14 @@ const Header = () => {
   const isDropdownActive = (submenu) =>
     submenu.some((s) => s.path === location.pathname);
 
-  // Sticky scroll effect
+ 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown on click-outside (desktop)
+  
   useEffect(() => {
     const handler = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -58,7 +57,7 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Close menus when route changes
+  
   useEffect(() => {
     setIsMenuOpen(false);
     setDesktopDropdownOpen(false);

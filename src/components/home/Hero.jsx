@@ -65,7 +65,6 @@ export default function Hero() {
             forward confidently.
           </p>
 
-          {/* BUTTONS */}
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
             <button className="px-5 sm:px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition shadow-lg text-sm sm:text-base">
               Apply Now
@@ -75,7 +74,6 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* TRUST LOGOS */}
           <div className="mt-10">
             <p className="text-xs sm:text-sm text-gray-200 mb-3 opacity-80">
               Trusted by businesses & customers
@@ -89,7 +87,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT FLOATING CARDS */}
+       
         <div
           className="
             relative flex justify-center 
@@ -98,7 +96,7 @@ export default function Hero() {
           "
         >
 
-          {/* Card 1 – Blue */}
+         
           <motion.img
             src="assets/card-blue.png"
             className="
@@ -114,7 +112,7 @@ export default function Hero() {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          {/* Card 2 – Orange */}
+       
           <motion.img
             src="assets/card-orange-1.png"
             className="
@@ -130,7 +128,6 @@ export default function Hero() {
             transition={{ duration: 4.6, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          {/* Card 3 – Purple */}
           <motion.img
             src="assets/purple-card.png"
             className="
@@ -149,7 +146,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* GLOW ORB BEHIND GRAPH */}
       <div
         className="
           absolute bottom-0 right-0
@@ -160,7 +156,7 @@ export default function Hero() {
         "
       ></div>
 
-      {/* GLOWING FLOATING GRAPH */}
+      
       <motion.img
         src="assets/graph-lines.png"
         className="

@@ -1,14 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// Lucide Icons
-import { 
-  CreditCard, 
-  Briefcase, 
-  BarChart3, 
-  Users 
-} from "lucide-react";
-
+import {  CreditCard, Briefcase, BarChart3, Users } from "lucide-react";
 import EmiCalculator from "../components/common/EmiCalculator";
 import ComparisonTable from "../components/common/ComparisonTable";
 import EligibilityChecker from "../components/common/EligibilityChecker";

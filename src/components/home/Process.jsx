@@ -45,14 +45,13 @@ export default function Process() {
           </p>
         </motion.div>
 
-        {/* MAIN GRID */}
+       
         <div className="
           relative
           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
           gap-6 sm:gap-8 lg:gap-10
         ">
 
-          {/* DESKTOP CONNECTING LINES */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0">
             <div className="w-full border-t-2 border-dashed border-blue-200"></div>
           </div>
@@ -76,7 +75,6 @@ export default function Process() {
                 hover:bg-blue-100/70
               "
             >
-              {/* Floating Step Number Behind Card */}
               <div className="
                 absolute -top-3 -left-3 
                 text-blue-200 font-extrabold text-5xl 
@@ -84,8 +82,7 @@ export default function Process() {
               ">
                 {i + 1}
               </div>
-
-              {/* Icon Circle */}
+=
               <div className="
                 w-12 h-12 sm:w-14 sm:h-14 
                 flex items-center justify-center
@@ -97,12 +94,11 @@ export default function Process() {
                 {step.icon}
               </div>
 
-              {/* Title */}
               <h3 className="font-bold text-lg sm:text-xl text-blue-900 mb-2">
                 {step.title}
               </h3>
 
-              {/* Text */}
+           
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {step.text}
               </p>

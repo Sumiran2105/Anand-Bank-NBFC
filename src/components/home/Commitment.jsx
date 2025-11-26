@@ -6,7 +6,7 @@ export default function Commitment() {
     <section className="py-14 sm:py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
-        {/* Title */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ export default function Commitment() {
           </p>
         </motion.div>
 
-        {/* Stats Block */}
+       
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-14 sm:mb-16"
           initial="hidden"
@@ -60,7 +60,7 @@ export default function Commitment() {
           ))}
         </motion.div>
 
-        {/* Paragraph */}
+       
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,10 +74,9 @@ export default function Commitment() {
           informed, and supported through every step of their financial journey.
         </motion.p>
 
-        {/* MAIN SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
 
-          {/* LEFT CARDS */}
+          
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -85,7 +84,7 @@ export default function Commitment() {
             variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
             className="space-y-5 sm:space-y-6"
           >
-            {/* CARD 1 */}
+          
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: -40 },
@@ -118,7 +117,7 @@ export default function Commitment() {
               </ul>
             </motion.div>
 
-            {/* CARD 2 */}
+           
             <motion.div
               variants={{
                 hidden: { opacity: 0, x: -40 },
@@ -150,7 +149,7 @@ export default function Commitment() {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT IMAGE */}
+         
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}

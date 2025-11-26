@@ -74,7 +74,7 @@ export default function Services() {
     <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-blue-50 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Heading */}
+        
         <h2 className="
           text-3xl sm:text-4xl font-extrabold 
           text-center mb-10 sm:mb-14 
@@ -83,7 +83,7 @@ export default function Services() {
           Our Financial Services
         </h2>
 
-        {/* Grid */}
+        
         <div className="
           grid grid-cols-1 
           sm:grid-cols-2 
@@ -105,7 +105,7 @@ export default function Services() {
                 hover:shadow-2xl hover:-translate-y-2
               "
             >
-              {/* Image */}
+             
               <div className="w-full h-36 sm:h-40 mb-5 rounded-xl overflow-hidden">
                 <img
                   src={service.image}

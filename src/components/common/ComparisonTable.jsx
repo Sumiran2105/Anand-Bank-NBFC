@@ -9,7 +9,7 @@ export default function ComparisonTable() {
         Compare Our Financial Solutions
       </h3>
 
-      {/* Responsive Wrapper */}
+     
       <div className="overflow-x-auto rounded-xl shadow-lg border border-blue-100">
         <table className="w-full border-collapse min-w-[600px] sm:min-w-full">
           <thead>
@@ -23,7 +23,7 @@ export default function ComparisonTable() {
 
           <tbody className="text-gray-800 text-sm sm:text-base">
 
-            {/* Row 1 */}
+            
             <tr className="border-b hover:bg-blue-100/40 transition-all duration-300">
               <td className="p-3 sm:p-5 font-semibold flex items-center gap-2 min-w-[180px]">
                 <FiCheckCircle className="text-blue-700 flex-shrink-0" />
@@ -40,7 +40,7 @@ export default function ComparisonTable() {
               </td>
             </tr>
 
-            {/* Row 2 */}
+            
             <tr className="border-b hover:bg-blue-100/40 transition-all duration-300">
               <td className="p-3 sm:p-5 font-semibold flex items-center gap-2">
                 <FiCheckCircle className="text-blue-700 flex-shrink-0" />
@@ -51,7 +51,7 @@ export default function ComparisonTable() {
               <td className="p-3 sm:p-5">Instant</td>
             </tr>
 
-            {/* Row 3 */}
+        
             <tr className="border-b hover:bg-blue-100/40 transition-all duration-300">
               <td className="p-3 sm:p-5 font-semibold flex items-center gap-2">
                 <FiCheckCircle className="text-blue-700 flex-shrink-0" />
@@ -62,7 +62,7 @@ export default function ComparisonTable() {
               <td className="p-3 sm:p-5">All Individuals</td>
             </tr>
 
-            {/* Row 4 */}
+          
             <tr className="hover:bg-blue-100/40 transition-all duration-300">
               <td className="p-3 sm:p-5 font-semibold flex items-center gap-2">
                 <FiCheckCircle className="text-blue-700 flex-shrink-0" />

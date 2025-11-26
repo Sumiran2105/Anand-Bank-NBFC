@@ -11,6 +11,7 @@ const Footer = () => {
     { path: "/services", label: "Services" },
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
+    
   ];
 
   const SocialIcons = {

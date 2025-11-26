@@ -64,7 +64,7 @@ help you build a sustainable, long-term savings plan.
           </p>
         </motion.div>
 
-        {/* Blog Cards Grid */}
+       
         <div
           className="
             grid grid-cols-1 
@@ -87,7 +87,7 @@ help you build a sustainable, long-term savings plan.
                 transition-all duration-300
               "
             >
-              {/* Image */}
+              
               <div className="overflow-hidden">
                 <img
                   src={p.image}
@@ -101,7 +101,7 @@ help you build a sustainable, long-term savings plan.
                 />
               </div>
 
-              {/* Content */}
+              
               <div className="p-5 sm:p-6">
                 <h3 className="font-bold text-lg sm:text-xl text-blue-900 mb-2">
                   {p.title}
@@ -126,7 +126,7 @@ help you build a sustainable, long-term savings plan.
           ))}
         </div>
 
-        {/* Modal */}
+        
         <BlogModal
           open={openModal}
           onClose={() => setOpenModal(false)}

@@ -58,17 +58,17 @@ export default function EmiCalculator() {
     <section className="max-w-5xl mx-auto mt-20 p-1 rounded-3xl bg-gradient-to-r from-blue-200 to-blue-100 shadow-xl">
       <div className="bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-lg border border-blue-100">
         
-        {/* Title */}
+    
         <h3 className="text-4xl font-extrabold text-blue-900 text-center mb-10">
           EMI Calculator
         </h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           
-          {/* Left: Inputs */}
+         
           <div className="space-y-8">
 
-            {/* Loan Amount */}
+           
             <div>
               <label className="text-gray-700 font-semibold flex items-center gap-2">
                 <FiCreditCard className="text-blue-600 text-xl" />
@@ -91,7 +91,7 @@ export default function EmiCalculator() {
               />
             </div>
 
-            {/* Rate */}
+           
             <div>
               <label className="text-gray-700 font-semibold flex items-center gap-2">
                 <FiPercent className="text-blue-600 text-xl" />
@@ -113,7 +113,7 @@ export default function EmiCalculator() {
               />
             </div>
 
-            {/* Tenure */}
+            
             <div>
               <label className="text-gray-700 font-semibold flex items-center gap-2">
                 <FiClock className="text-blue-600 text-xl" />
@@ -137,7 +137,7 @@ export default function EmiCalculator() {
 
           </div>
 
-          {/* Right: Donut Chart */}
+          
           <div className="flex flex-col items-center justify-center">
             <div className="w-64 sm:w-80">
               <Doughnut data={data} options={options} />
