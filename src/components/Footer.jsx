@@ -63,34 +63,48 @@ const Footer = () => {
           <div className="py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Company Info */}
-            <div>
-              <div className="flex items-start space-x-3 mb-4">
-                <div className="w-16 h-16 rounded-full border-2  border-orange-200 overflow-hidden">
-                  <img src="assets/Anandhlogo.png" className="w-full h-full object-contain" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold">
-                    <span className="text-orange-400">ANAND</span> <span>BANK NBFC</span>
-                  </h2>
-                  <p className="text-orange-200 italic text-sm">"Dharmo Rakshati Rakshitah"</p>
-                </div>
-              </div>
+            {/* Company Info */}
+<div>
+  <div className="flex items-center space-x-3 mb-4 overflow-hidden whitespace-nowrap">
 
-              <p className="text-gray-300 text-sm mb-2">
-                Transforming financial goals into secure, dependable banking solutions with trust and transparency.
-              </p>
+    {/* Logo white background circle */}
+    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center p-2 flex-shrink-0">
+      <img
+        src="assets/Anandhlogo.png"
+        className="w-full h-full object-contain"
+        alt="Anand Logo"
+      />
+    </div>
 
-              <div className="flex space-x-3 mt-4">
-                {["facebook", "twitter", "instagram",].map((icon) => (
-                  <div
-                    key={icon}
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:scale-110 transition"
-                  >
-                    {SocialIcons[icon]}
-                  </div>
-                ))}
-              </div>
-            </div>
+    {/* Text block */}
+    <div className="flex flex-col leading-tight overflow-hidden">
+      <h2 className="text-lg md:text-2xl font-bold truncate">
+        <span className="text-orange-400">ANAND</span>{" "}
+        <span>BANK NBFC</span>
+      </h2>
+      <p className="text-orange-200 italic text-xs md:text-sm truncate">
+        "Dharmo Rakshati Rakshitah"
+      </p>
+    </div>
+
+  </div>
+
+  <p className="text-gray-300 text-sm mb-2">
+    Transforming financial goals into secure, dependable banking solutions with trust and transparency.
+  </p>
+
+  <div className="flex space-x-3 mt-4">
+    {["facebook", "twitter", "instagram"].map((icon) => (
+      <div
+        key={icon}
+        className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:scale-110 transition"
+      >
+        {SocialIcons[icon]}
+      </div>
+    ))}
+  </div>
+</div>
+
 
             {/* Quick Links */}
             <div>

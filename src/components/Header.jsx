@@ -74,33 +74,40 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
 
           {/* LOGO */}
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm">
-              <img
-                src="/assets/founder.jpg"
-                alt="Founder"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+         {/* LOGO */}
+<Link
+  to="/"
+  className="flex items-center space-x-2 md:space-x-3 group overflow-hidden whitespace-nowrap"
+>
+  {/* Founder Image - Smaller on mobile */}
+  <div className="w-10 h-10 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm flex-shrink-0">
+    <img
+      src="/assets/founder.jpg"
+      alt="Founder"
+      className="w-full h-full object-cover object-top"
+    />
+  </div>
 
-            <div className="flex flex-col items-start">
-              <div className="flex items-center space-x-2">
-                <img
-                  src="assets/Anandhlogo.png"
-                  alt="Anand Logo"
-                  className="w-8 h-10 md:w-10 md:h-12 object-contain"
-                />
-                <div className="flex flex-col items-start">
-                  <h1 className="text-lg md:text-xl font-bold text-blue-800">
-                    <span className="text-orange-500">ANAND </span>BANK NBFC
-                  </h1>
-                  <p className="text-xs text-gray-600 italic mt-1">
-                    "Dharmo Rakshati Rakshitah"
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
+  {/* LOGO + TEXT */}
+  <div className="flex items-center space-x-2 flex-shrink overflow-hidden">
+    <img
+      src="assets/Anandhlogo.png"
+      alt="Anand Logo"
+      className="w-6 h-8 md:w-10 md:h-12 object-contain flex-shrink-0"
+    />
+
+    <div className="flex flex-col items-start leading-tight overflow-hidden">
+      <h1 className="text-sm md:text-xl font-bold text-blue-800 truncate">
+        <span className="text-orange-500">ANAND </span>
+        BANK NBFC
+      </h1>
+      <p className="text-[10px] md:text-xs text-gray-600 italic truncate">
+        "Dharmo Rakshati Rakshitah"
+      </p>
+    </div>
+  </div>
+</Link>
+
 
           {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center gap-4">
