@@ -12,27 +12,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ❌ Remove flex, place-items */
-/* ✔ Make body full width & normal */
+/* Clean Body */
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
   background-color: #f8f9fc;
-  display: block; /* <-- IMPORTANT */
+  display: block; /* Important */
 }
 
-/* ✔ Ensure the React root fills width */
+/* Ensure React Root */
 #root {
   width: 100%;
   min-height: 100vh;
 }
 
+/* Remove underline on links */
 a {
   text-decoration: none;
 }
 
+/* ============================
+    DROPDOWN GLASS ANIMATION
+=============================== */
 @keyframes glassDropdown {
   0% {
     opacity: 0;
@@ -50,3 +53,91 @@ a {
   animation: glassDropdown 0.25s ease-out;
 }
 
+
+/* ============================
+      FLOATING PARTICLES
+   (Used in Hero Section)
+=============================== */
+
+/* Global Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-180px) translateX(40px);
+    opacity: 0;
+  }
+}
+
+/* Main Particle Container */
+.floating-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Two floating dots (light glow effect) */
+.floating-particles::before,
+.floating-particles::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.75), transparent);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 80%;
+  left: 25%;
+  animation: float 8s infinite linear;
+}
+
+/* Second particle (different location & timing) */
+.floating-particles::after {
+  left: 70%;
+  animation-duration: 12s;
+}
+
+/* =====================================
+      FLOATING RUPEE SYMBOLS (₹)
+===================================== */
+
+@keyframes rupeeFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-180px) translateX(30px) rotate(12deg);
+    opacity: 0;
+  }
+}
+
+.rupee-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.rupee {
+  position: absolute;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  animation: rupeeFloat linear infinite;
+}
+
+/* You can add many variations */
+.rupee.r1 { left: 20%; bottom: 10%; animation-duration: 7s; }
+.rupee.r2 { left: 50%; bottom: 5%; animation-duration: 9s; }
+.rupee.r3 { left: 75%; bottom: 12%; animation-duration: 11s; }
+.rupee.r4 { left: 35%; bottom: 0%; animation-duration: 10s; }
+.rupee.r5 { left: 60%; bottom: 8%; animation-duration: 8s; }
+.rupee.r6 { left: 85%; bottom: 15%; animation-duration: 12s; }

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Commitment() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-14 sm:py-20 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
@@ -12,26 +12,24 @@ export default function Commitment() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="text-4xl font-extrabold text-blue-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-3 sm:mb-4">
             Our Commitment to You
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             More than financial services — we deliver trust, transparency, and long-term
             support for every customer and every dream.
           </p>
         </motion.div>
 
-        {/* ⭐ STATISTICS BLOCK WITH ANIMATION + STAGGER */}
+        {/* Stats Block */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-14 sm:mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.15 } },
-          }}
+          variants={{ visible: { transition: { staggerChildren: 0.15 } } }}
         >
           {[
             { num: "10,000+", label: "Happy Customers" },
@@ -47,23 +45,28 @@ export default function Commitment() {
               }}
               transition={{ duration: 0.6 }}
               className="
-                bg-white shadow-md rounded-xl px-6 py-6 text-center border border-blue-100
-                transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
+                bg-white shadow-md rounded-lg sm:rounded-xl 
+                px-4 py-5 sm:px-6 sm:py-6 
+                text-center border border-blue-100
+                transition-all duration-300
+                hover:-translate-y-2 hover:shadow-xl
               "
             >
-              <h3 className="text-4xl font-extrabold text-blue-900 mb-1">{item.num}</h3>
-              <p className="text-gray-600 text-sm">{item.label}</p>
+              <h3 className="text-2xl sm:text-4xl font-extrabold text-blue-900 mb-1">
+                {item.num}
+              </h3>
+              <p className="text-gray-600 text-xs sm:text-sm">{item.label}</p>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Intro Paragraph */}
+        {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-gray-700 text-lg leading-relaxed mb-10"
+          className="text-gray-700 text-base sm:text-lg leading-relaxed mb-10 sm:mb-12"
         >
           At <span className="font-semibold text-blue-900">Anand Bank NBFC</span>,
           we are committed to providing financial solutions that are not only reliable
@@ -72,19 +75,16 @@ export default function Commitment() {
         </motion.p>
 
         {/* MAIN SECTION */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
 
-          {/* LEFT SIDE ANIMATED CARDS */}
+          {/* LEFT CARDS */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={{
-              visible: { transition: { staggerChildren: 0.2 } },
-            }}
-            className="space-y-6"
+            variants={{ visible: { transition: { staggerChildren: 0.2 } } }}
+            className="space-y-5 sm:space-y-6"
           >
-
             {/* CARD 1 */}
             <motion.div
               variants={{
@@ -93,22 +93,24 @@ export default function Commitment() {
               }}
               transition={{ duration: 0.6 }}
               className="
-                p-6 rounded-xl bg-white/90 shadow-sm border border-blue-100
-                transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
+                p-5 sm:p-6 rounded-xl bg-white/90 
+                shadow-sm border border-blue-100
+                transition-all duration-300 
+                hover:-translate-y-2 hover:shadow-xl
               "
             >
-              <h4 className="font-semibold text-blue-900 text-xl flex items-center gap-2 mb-2">
-                <span className="text-blue-600 text-2xl">🔒</span>
+              <h4 className="font-semibold text-lg sm:text-xl text-blue-900 flex items-center gap-2 mb-2">
+                <span className="text-blue-600 text-xl sm:text-2xl">🔒</span>
                 Transparent & Customer-First Approach
               </h4>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                 We ensure every step is clearly communicated — no hidden terms or surprises.
                 Every service is designed around your comfort, clarity, and long-term
                 financial capability.
               </p>
 
-              <ul className="list-disc list-inside text-gray-500 mt-3 space-y-1">
+              <ul className="list-disc list-inside text-gray-500 mt-3 space-y-1 text-sm sm:text-base">
                 <li>Clear documentation & support</li>
                 <li>Easy-to-understand loan structures</li>
                 <li>Personalized financial solutions</li>
@@ -124,58 +126,53 @@ export default function Commitment() {
               }}
               transition={{ duration: 0.6 }}
               className="
-                p-6 rounded-xl bg-white/90 shadow-sm border border-blue-100
-                transition-all duration-300 hover:-translate-y-2 hover:shadow-xl
+                p-5 sm:p-6 rounded-xl bg-white/90 
+                shadow-sm border border-blue-100
+                transition-all duration-300
+                hover:-translate-y-2 hover:shadow-xl
               "
             >
-              <h4 className="font-semibold text-blue-900 text-xl flex items-center gap-2 mb-2">
-                <span className="text-blue-600 text-2xl">✅</span>
+              <h4 className="font-semibold text-lg sm:text-xl text-blue-900 flex items-center gap-2 mb-2">
+                <span className="text-blue-600 text-xl sm:text-2xl">✅</span>
                 Reliable & Secure Financial Support
               </h4>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                 Your financial well-being is our priority. Our experienced teams ensure safe,
                 secure, and responsible guidance across all lending and investment processes.
               </p>
 
-              <ul className="list-disc list-inside text-gray-500 mt-3 space-y-1">
+              <ul className="list-disc list-inside text-gray-500 mt-3 space-y-1 text-sm sm:text-base">
                 <li>Trusted NBFC expertise</li>
                 <li>Secure processing & data protection</li>
                 <li>End-to-end guidance for all decisions</li>
               </ul>
             </motion.div>
-
           </motion.div>
 
-          {/* RIGHT SIDE IMAGE WITH FADE + SLIDE-IN */}
+          {/* RIGHT IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="relative flex items-center justify-center w-full h-full"
+            className="relative flex items-center justify-center w-full"
           >
-
-            {/* Fade background */}
             <div className="absolute inset-0 bg-gradient-to-l from-white via-transparent to-transparent pointer-events-none" />
 
-            {/* Blended Image */}
             <img
               src="/assets/commitment-2.png"
               alt="Commitment"
               className="
-                w-[85%] 
-                h-auto
-                object-contain
+                w-[90%] sm:w-[80%] lg:w-[85%]
+                h-auto object-contain
                 opacity-95
                 mix-blend-multiply
                 mx-auto
               "
             />
           </motion.div>
-
         </div>
-
       </div>
     </section>
   );

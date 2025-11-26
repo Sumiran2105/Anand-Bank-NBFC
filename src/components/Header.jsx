@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // separate desktop & mobile dropdown states
+  // Dropdown states
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
@@ -14,10 +14,14 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // ⭐ UPDATED NAV ITEMS
   const navItems = [
     { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+
+    // NEW LOANS DROPDOWN
     {
-      label: "Services",
+      label: "Loans",
       type: "dropdown",
       submenu: [
         { path: "/personal-loan", label: "Personal Loan" },
@@ -26,7 +30,9 @@ const Header = () => {
         { path: "/financial-advice", label: "Financial Advisors" },
       ],
     },
-    { path: "/about", label: "About" },
+
+    // Services is now a normal link
+    { path: "/services", label: "Services" },
     { path: "/contact", label: "Contact" },
   ];
 
@@ -41,7 +47,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown on click-outside (desktop only)
+  // Close dropdown on click-outside (desktop)
   useEffect(() => {
     const handler = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -52,7 +58,7 @@ const Header = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Close all menus on route change
+  // Close menus when route changes
   useEffect(() => {
     setIsMenuOpen(false);
     setDesktopDropdownOpen(false);
@@ -68,9 +74,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
 
-          {/* ⭐ RESTORED OLD LOGO STYLE */}
+          {/* LOGO */}
           <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all duration-300">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-orange-200 overflow-hidden shadow-sm">
               <img
                 src="/assets/founder.jpg"
                 alt="Founder"
@@ -98,12 +104,11 @@ const Header = () => {
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden lg:flex items-center gap-3 relative">
+          <nav className="hidden lg:flex items-center gap-4">
 
             {navItems.map((item) =>
               item.type !== "dropdown" ? (
-                
-                /* NORMAL DESKTOP LINKS */
+                /* Normal Desktop Links */
                 <Link
                   key={item.path}
                   to={item.path}
@@ -115,71 +120,58 @@ const Header = () => {
                 >
                   {item.label}
                 </Link>
-
               ) : (
-                /* DESKTOP SERVICES DROPDOWN (click-only) */
-                <div key={item.label} className="relative flex items-center" ref={dropdownRef}>
-  
-  {/* LEFT PART → NAVIGATE TO SERVICES PAGE */}
-  <button
-    onClick={() => navigate("/services")}
-    className={`px-4 py-2 font-semibold rounded-l-lg min-w-[120px] transition ${
-      isDropdownActive(item.submenu)
-        ? "bg-blue-100 border border-blue-200 text-blue-700"
-        : "text-blue-800 hover:bg-blue-50"
-    }`}
-  >
-    {item.label}
-  </button>
+                /* LOANS DROPDOWN */
+                <div key={item.label} className="relative" ref={dropdownRef}>
+                  <button
+                    onClick={() => setDesktopDropdownOpen(!desktopDropdownOpen)}
+                    className={`
+                      px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition
+                      ${
+                        desktopDropdownOpen || isDropdownActive(item.submenu)
+                          ? "text-blue-700 bg-blue-100 border border-blue-200"
+                          : "text-blue-800 hover:bg-blue-50"
+                      }
+                    `}
+                  >
+                    {item.label}
+                    <span
+                      className={`transition-transform duration-300 ${
+                        desktopDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▾
+                    </span>
+                  </button>
 
-  {/* RIGHT PART → OPEN/CLOSE DROPDOWN */}
-  <button
-    onClick={(e) => {
-      e.stopPropagation();
-      setDesktopDropdownOpen(!desktopDropdownOpen);
-    }}
-    className={`px-2 py-2 rounded-r-lg border border-l-0 transition
-      ${desktopDropdownOpen ? "bg-blue-100 border-blue-200" : "hover:bg-blue-50"}`}
-  >
-    <span
-      className={`transition-transform duration-300 ${
-        desktopDropdownOpen ? "rotate-180" : ""
-      }`}
-    >
-      ▾
-    </span>
-  </button>
-
-  {/* DROPDOWN MENU */}
-  {desktopDropdownOpen && (
-    <div className="
-      absolute left-0 top-12 w-64 py-4
-      bg-white/30 backdrop-blur-xl shadow-xl
-      border border-white/40 rounded-2xl animate-glass-dropdown z-50
-    ">
-      {item.submenu.map((sub) => (
-        <Link
-          key={sub.path}
-          to={sub.path}
-          className="
-            block px-5 py-2.5 mx-2 mb-1 rounded-xl
-            hover:bg-white/40 transition text-blue-900
-          "
-          onClick={() => setDesktopDropdownOpen(false)}
-        >
-          {sub.label}
-        </Link>
-      ))}
-    </div>
-  )}
-
-</div>
-
+                  {desktopDropdownOpen && (
+                    <div
+                      className="
+                        absolute left-0 top-12 w-60 py-3 bg-white shadow-xl rounded-xl
+                        border border-gray-200 z-50
+                      "
+                    >
+                      {item.submenu.map((sub) => (
+                        <Link
+                          key={sub.path}
+                          to={sub.path}
+                          className="
+                            block px-4 py-2.5 text-blue-900 rounded-lg
+                            hover:bg-blue-50 transition
+                          "
+                          onClick={() => setDesktopDropdownOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               )
             )}
           </nav>
 
-          {/* MOBILE HAMBURGER ICON */}
+          {/* MOBILE HAMBURGER */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-blue-700 text-4xl p-2"
@@ -196,8 +188,7 @@ const Header = () => {
 
               {navItems.map((item) =>
                 item.type !== "dropdown" ? (
-                  
-                  /* NORMAL MOBILE LINKS */
+                  /* Normal Mobile Link */
                   <Link
                     key={item.path}
                     to={item.path}
@@ -206,26 +197,17 @@ const Header = () => {
                   >
                     {item.label}
                   </Link>
-
                 ) : (
-                  /* MOBILE SERVICES MENU */
+                  /* MOBILE LOANS DROPDOWN */
                   <div key={item.label} className="px-4">
-
-                    {/* SERVICES ROW */}
                     <div className="flex items-center justify-between bg-gray-50 rounded-lg">
-
-                      {/* TEXT → GO TO /services */}
                       <button
-                        onClick={() => {
-                          navigate("/services");
-                          setIsMenuOpen(false);
-                        }}
+                        onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                         className="py-3 text-left font-semibold w-full"
                       >
                         {item.label}
                       </button>
 
-                      {/* ARROW → OPEN SUBMENU */}
                       <button
                         onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                         className="p-3 text-xl"
@@ -238,10 +220,8 @@ const Header = () => {
                           ▾
                         </span>
                       </button>
-
                     </div>
 
-                    {/* MOBILE SUBMENU LIST */}
                     {mobileDropdownOpen && (
                       <div className="pl-4 mt-1 space-y-1">
                         {item.submenu.map((sub) => (

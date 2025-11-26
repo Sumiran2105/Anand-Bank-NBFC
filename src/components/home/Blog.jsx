@@ -46,7 +46,7 @@ help you build a sustainable, long-term savings plan.
   };
 
   return (
-    <section className="py-18 px-6 bg-white">
+    <section className="py-14 sm:py-19 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
@@ -54,51 +54,69 @@ help you build a sustainable, long-term savings plan.
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="text-4xl font-extrabold text-blue-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-3 sm:mb-4">
             Financial Resources & Insights
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 text-sm sm:text-lg max-w-2xl mx-auto">
             Stay informed with helpful guides, tips, and financial education.
           </p>
         </motion.div>
 
-        {/* Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* Blog Cards Grid */}
+        <div
+          className="
+            grid grid-cols-1 
+            sm:grid-cols-2
+            md:grid-cols-3
+            gap-6 sm:gap-8
+          "
+        >
           {posts.map((p, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
+              transition={{ delay: i * 0.15 }}
               viewport={{ once: true }}
               className="
-                bg-white rounded-2xl shadow-lg overflow-hidden border border-blue-100 
+                bg-white rounded-2xl shadow-lg overflow-hidden 
+                border border-blue-100 
+                hover:-translate-y-3 hover:shadow-2xl hover:border-blue-300
                 transition-all duration-300
-                hover:-translate-y-4 hover:shadow-2xl hover:border-blue-300
-                group
               "
             >
+              {/* Image */}
               <div className="overflow-hidden">
                 <img
                   src={p.image}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="
+                    w-full 
+                    h-36 sm:h-40 md:h-48 
+                    object-cover 
+                    transition-transform duration-500 
+                    hover:scale-110
+                  "
                 />
               </div>
 
-              <div className="p-6">
-                <h3 className="font-bold text-xl text-blue-900 mb-2 group-hover:text-blue-700 transition">
+              {/* Content */}
+              <div className="p-5 sm:p-6">
+                <h3 className="font-bold text-lg sm:text-xl text-blue-900 mb-2">
                   {p.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4">{p.text}</p>
+                <p className="text-gray-600 text-sm sm:text-base mb-4">
+                  {p.text}
+                </p>
 
                 <button
                   onClick={() => openPost(p)}
                   className="
-                    text-blue-700 font-medium flex items-center gap-1
-                    transition-all duration-300 group-hover:gap-3
+                    text-blue-700 font-medium text-sm sm:text-base
+                    flex items-center gap-1
+                    transition-all duration-300 hover:gap-2
                   "
                 >
                   Read More →

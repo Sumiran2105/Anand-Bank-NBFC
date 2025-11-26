@@ -69,7 +69,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold">
-                    <span className="text-orange-400">ANAND</span> <span>BANK</span>
+                    <span className="text-orange-400">ANAND</span> <span>BANK NBFC</span>
                   </h2>
                   <p className="text-orange-200 italic text-sm">"Dharmo Rakshati Rakshitah"</p>
                 </div>

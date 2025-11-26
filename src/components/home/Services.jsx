@@ -71,14 +71,25 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-blue-50 px-6">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-blue-50 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-4xl font-extrabold text-center mb-14 text-blue-900">
+        {/* Heading */}
+        <h2 className="
+          text-3xl sm:text-4xl font-extrabold 
+          text-center mb-10 sm:mb-14 
+          text-blue-900
+        ">
           Our Financial Services
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Grid */}
+        <div className="
+          grid grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-3 
+          gap-8 sm:gap-10
+        ">
           {services.map((service, index) => (
             <div
               key={index}
@@ -87,36 +98,41 @@ export default function Services() {
                 backdrop-blur-md 
                 rounded-2xl 
                 shadow-lg 
-                hover:shadow-2xl
                 transition 
-                hover:-translate-y-2 
-                p-6
+                p-5 sm:p-6
                 border border-white/50
+
+                hover:shadow-2xl hover:-translate-y-2
               "
             >
               {/* Image */}
-              <div className="w-full h-40 mb-6 rounded-xl overflow-hidden">
+              <div className="w-full h-36 sm:h-40 mb-5 rounded-xl overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                  className="
+                    w-full h-full 
+                    object-cover
+                    transition duration-300 
+                    group-hover:scale-105
+                  "
                 />
               </div>
 
-              <h3 className="font-bold text-2xl text-blue-900 mb-1">
+              <h3 className="font-bold text-xl sm:text-2xl text-blue-900 mb-1">
                 {service.title}
               </h3>
 
-              <p className="text-blue-600 font-medium mb-4">
+              <p className="text-blue-600 font-medium mb-3 text-sm sm:text-base">
                 {service.highlight}
               </p>
 
-              <p className="text-gray-600 mb-4 leading-relaxed">
+              <p className="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base">
                 {service.text}
               </p>
 
               {/* Bullet Points */}
-              <ul className="text-gray-700 space-y-1 mb-5">
+              <ul className="text-gray-700 space-y-1 mb-5 text-sm sm:text-base">
                 {service.points.map((point, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-blue-500 mr-2 mt-[2px]">•</span>
@@ -125,8 +141,12 @@ export default function Services() {
                 ))}
               </ul>
 
-              {/* Accent Bar */}
-              <div className="w-12 h-1 bg-blue-500 group-hover:w-20 transition-all duration-300"></div>
+              {/* Accent bar */}
+              <div className="
+                w-12 h-1 bg-blue-500 
+                group-hover:w-20 
+                transition-all duration-300
+              "></div>
 
             </div>
           ))}
