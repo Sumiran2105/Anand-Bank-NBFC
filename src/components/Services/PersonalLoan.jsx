@@ -46,7 +46,7 @@ export default function PersonalLoan() {
 
           <p className="text-gray-600 mb-6 text-sm md:text-[17px] leading-relaxed">
             Whether you're planning a vacation, covering medical expenses, funding education,
-            or upgrading your home — our personal loan gives you complete financial freedom
+            or upgrading your home our personal loan gives you complete financial freedom
             with fast approval and transparent terms.
           </p>
 
@@ -214,7 +214,7 @@ export default function PersonalLoan() {
       </h2>
 
       <p className="text-gray-200 text-sm md:text-lg mb-4 leading-relaxed">
-        Your goals matter — whether it’s education, health, travel, or a personal milestone.
+        Your goals matter whether it’s education, health, travel, or a personal milestone.
         We’re here to support you with transparent and flexible financing.
       </p>
 
