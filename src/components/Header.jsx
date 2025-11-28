@@ -17,7 +17,8 @@ const Header = () => {
   // ⭐ UPDATED NAV ITEMS
   const navItems = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
+    
+    { path: "/services", label: "Services" },
 
     // NEW LOANS DROPDOWN
     {
@@ -31,7 +32,7 @@ const Header = () => {
       ],
     },
 
-    { path: "/services", label: "Services" },
+    { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
   ];
 
