@@ -46,11 +46,24 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-indigo-900 mb-10 sm:mb-12 drop-shadow">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-indigo-900 mb-6 drop-shadow">
           Why Choose Anand Bank NBFC?
         </h2>
 
-        {/* Grid */}
+        {/* Content Paragraph */}
+        <p className="
+          max-w-4xl
+          mx-auto
+          text-center
+          text-gray-700
+          text-base sm:text-lg
+          leading-relaxed
+          mb-12
+        ">
+         <span className="font-semibold text-blue-900">Anand Bank NBFC</span> stands as a modern, future-focused financial institution committed to making credit, investment, and financial growth accessible to everyone. As a trusted Non-Banking Financial Company, we bridge the gap between traditional banking and today’s dynamic financial needs by offering flexible, transparent, and customer-first solutions. In a rapidly evolving financial landscape, we deliver services that are easy to access, simple to understand, and thoughtfully designed to support both personal and business aspirations, blending responsible lending with smart financial planning to provide reliable, empowering support to every customer.
+        </p>
+
+        {/* Cards Grid — UNCHANGED */}
         <div className="
           grid grid-cols-1
           sm:grid-cols-2
@@ -69,7 +82,6 @@ export default function WhyChooseUs() {
                 p-6 sm:p-8 
                 flex flex-col items-center 
                 text-center
-
                 transition 
                 hover:-translate-y-3 
                 hover:shadow-[0_18px_38px_rgba(180,150,80,0.24)] 
@@ -79,7 +91,9 @@ export default function WhyChooseUs() {
                 hover:to-white
               "
             >
-              <div className="mb-4 drop-shadow-lg">{item.icon}</div>
+              <div className="mb-4 drop-shadow-lg">
+                {item.icon}
+              </div>
 
               <h3 className="
                 font-semibold 

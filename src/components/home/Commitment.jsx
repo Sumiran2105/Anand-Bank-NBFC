@@ -18,8 +18,12 @@ export default function Commitment() {
             Our Commitment to You
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-            More than financial services — we deliver trust, transparency, and long-term
-            support for every customer and every dream.
+            At <span className="font-semibold text-blue-900">Anand Bank NBFC</span>,
+          your financial well-being comes first. We believe in creating value,
+building trust, and empowering every customer to move forward with confidence. Whether you
+are looking to fulfill personal needs, grow your business, or strengthen your financial future, we
+are here with solutions that are stable, secure, and built around your goals.
+
           </p>
         </motion.div>
 
@@ -69,9 +73,7 @@ export default function Commitment() {
           className="text-gray-700 text-base sm:text-lg leading-relaxed mb-10 sm:mb-12"
         >
           At <span className="font-semibold text-blue-900">Anand Bank NBFC</span>,
-          we are committed to providing financial solutions that are not only reliable
-          but also empowering. Our goal is to ensure customers feel confident,
-          informed, and supported through every step of their financial journey.
+          we provide dependable financial solutions designed to inform, support, and empower customers at every step.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">

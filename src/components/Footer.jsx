@@ -90,7 +90,10 @@ const Footer = () => {
   </div>
 
   <p className="text-gray-300 text-sm mb-2">
-    Transforming financial goals into secure, dependable banking solutions with trust and transparency.
+
+Empowering financial dreams.
+Strengthening futures.
+Delivering trust and support every step of the way.
   </p>
 
   <div className="flex space-x-3 mt-4">
