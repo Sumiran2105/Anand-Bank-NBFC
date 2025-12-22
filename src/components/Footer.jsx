@@ -68,9 +68,9 @@ const Footer = () => {
   <div className="flex items-center space-x-3 mb-4 overflow-hidden whitespace-nowrap">
 
     {/* Logo white background circle */}
-    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white flex items-center justify-center p-2 flex-shrink-0">
+    <div className="w-14 h-15  rounded-full bg-white flex items-center justify-center p-2 flex-shrink-0">
       <img
-        src="assets/Anandhlogo.png"
+        src="assets/Anandlogo.jpeg"
         className="w-full h-full object-contain"
         alt="Anand Logo"
       />
@@ -91,9 +91,8 @@ const Footer = () => {
 
   <p className="text-gray-300 text-sm mb-2">
 
-Empowering financial dreams.
-Strengthening futures.
-Delivering trust and support every step of the way.
+At Anand NDFC Bank, your goals are our commitment. Empowering financial dreams, Strengthening futures, Delivering trust and support every step of the way.
+
   </p>
 
   <div className="flex space-x-3 mt-4">
@@ -138,7 +137,7 @@ Delivering trust and support every step of the way.
               </p>
 
               <p className="text-gray-300 text-sm mt-2">📞 +91 1800 123 4857</p>
-              <p className="text-gray-300 text-sm">📧 info@anandbank.com</p>
+              <p className="text-gray-300 text-sm">📧 info@anandgroup.org</p>
             </div>
           </div>
 

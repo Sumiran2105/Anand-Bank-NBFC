@@ -92,7 +92,7 @@ const Header = () => {
   {/* LOGO + TEXT */}
   <div className="flex items-center space-x-2 flex-shrink overflow-hidden">
     <img
-      src="assets/Anandhlogo.png"
+      src="assets/Anandlogo.jpeg"
       alt="Anand Logo"
       className="w-7 h-9 md:w-10 md:h-12 object-contain flex-shrink-0"
     />

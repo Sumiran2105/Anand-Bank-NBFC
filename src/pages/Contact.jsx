@@ -61,8 +61,8 @@ const ContactBankWithMapBottom = () => {
       ),
       title: "Customer Support Email",
       description: "Email our support team for account and product queries.",
-      details: ["support@anandbank.com", ],
-      link: "mailto:support@anandbank.com",
+      details: ["info@anandgroup.org", ],
+      link: "mailto:info@anandgroup.org",
       action: "Email Us",
       color: "from-indigo-500 to-indigo-600",
       borderColor: "border-slate-100",
@@ -434,7 +434,7 @@ const ContactBankWithMapBottom = () => {
                       <div className="flex space-x-7">
                        
                         <a 
-                          href="https://twitter.com/anandrealtyy" 
+                          href="https://twitter.com/anandndfc" 
                           target="_blank"
                           rel="noopener noreferrer"
                           className="bg-gradient-to-r from-sky-500 to-sky-600 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
@@ -456,7 +456,7 @@ const ContactBankWithMapBottom = () => {
                           </svg>
                         </a>
                         <a 
-                          href="mailto:info@anandrealtyy.com" 
+                          href="mailto:info@anandgroup.org" 
                           className="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-2 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
                           aria-label="Send us an email"
                         >
